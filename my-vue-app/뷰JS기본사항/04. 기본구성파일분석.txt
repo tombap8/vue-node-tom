@@ -1,0 +1,38 @@
+[  ######## webpack 기본구성파일 분석 ######## ]
+
+[ 1. index.html - 기본 root에 위치 ] ##############
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>my-vue-app</title>
+  </head>
+  <body>
+    <div id="app"></div> ==> 컴포넌트 Root 부모요소
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+
+==> 기본적으로 src/main.js를 로딩한다!
+
+################################################
+
+[ 2. src/main.js ==> 가장먼저 읽히는 외부파일 ]
+
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue' ==> 뷰관련 모듈 불러오기
+import App from './App' ==> src에 있는 App.vue 파일 불러오기(확장자생략가능)
+
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>'
+})
+
+
