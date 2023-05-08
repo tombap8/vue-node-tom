@@ -2,7 +2,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import 'babel-polyfill';
-import {myD1,myD2} from './jsData/cityData';
+import {myD0,myD1,myD2} from './jsData/cityData';
 
 // Vuex 라이브러리를 Vue 프레임워크에서 사용하려면?
 // Vue.use(Vuex) -> 뷰에서 뷰엑스 사용등록 필수!!!
@@ -27,7 +27,9 @@ const store = new Vuex.Store({
     // (1) 데이터 셋팅구역 :
     state:{
         // 도시데이터 셋업
-        cityData: myD1,
+        // 스프레드 연산자로 두개의 객체를 합친다!
+        // {...객체1,...객체2,...객체3}
+        cityData: {...myD0,...myD1},
         // 이미지정보 셋업변수
         imgsrc : "",
         // 도시설명정보 셋업변수

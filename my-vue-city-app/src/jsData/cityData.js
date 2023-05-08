@@ -1,9 +1,14 @@
 // 도시 정보 데이터 JS - cityData.js
-const myD1 = {
+
+const myD0 ={
     인트로: {
         이미지: "https://img.freepik.com/premium-vector/city-illustration_23-2147514701.jpg",
         설명: "도시소개에 오신것을 환영합니다!",
     },
+
+}
+
+const myD1 = {
     서울: {
         이미지: `https://www.shutterstock.com/image-photo/songpagu-seoul-south-korea-september-260nw-2094838786.jpg`,
         설명: `대한민국의 수도인 서울을 지방자치단체인 특별시로 부르는 명칭이다. 한반도 중앙에 있으며, 한강을 사이에 두고 남북으로 펼쳐져 있다. 북쪽 끝은 도봉구 도봉동, 동쪽 끝은 강동구 상일동, 남쪽 끝은 서초구 원지동, 서쪽 끝은 강서구 오곡동이다. 시청은 중구 을지로1가(태평로1가 31)에 있다.`,
@@ -33,4 +38,4 @@ const myD2 = {
     },
 };
 
-export {myD1,myD2};
+export {myD0,myD1,myD2};
