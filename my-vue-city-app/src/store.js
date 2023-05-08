@@ -2,7 +2,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import 'babel-polyfill';
-import {myD0,myD1,myD2} from './jsData/cityData';
+import {myD0,myD1, myD2} from './jsData/cityData';
 
 // Vuex 라이브러리를 Vue 프레임워크에서 사용하려면?
 // Vue.use(Vuex) -> 뷰에서 뷰엑스 사용등록 필수!!!
