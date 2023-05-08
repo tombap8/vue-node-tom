@@ -21,7 +21,19 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  methods:{
+        // 스토어 변수 업데이트 메서드
+        chgData(pm){
+            console.log("업데이트!",pm);
+            // 이자리에서 바로 스토어 변수를 업데이트 한다!!
+            // 1. 이미지 변수 : imgsrc
+            this.$store.state.imgsrc = this.$store.state.cityData[pm].이미지;
+            // 2. 도시설명 변수 : desc
+            this.$store.state.desc = this.$store.state.cityData[pm].설명;
+
+        }
+    }
 }
 </script>
 
