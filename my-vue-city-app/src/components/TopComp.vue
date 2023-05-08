@@ -1,15 +1,18 @@
 <template>
   <header>
       <ul class="gnb">
-          <li>
-              <a href="#" v-on:click="chgData('서울')">서울</a>
+        <!--  v-값,i-속성명 -->
+          <li v-for="(v,i) in sdata" v-bind:key="i" v-if="i!='인트로'">
+              <a href="#" v-on:click="chgData(i)">
+                {{ i }}
+              </a>
           </li>
-          <li>
+          <!-- <li>
               <a href="#" v-on:click="chgData('부산')">부산</a>
           </li>
           <li>
               <a href="#" v-on:click="chgData('제주')">제주</a>
-          </li>
+          </li> -->
       </ul>
   </header>
 </template>
@@ -19,7 +22,7 @@ export default {
   name: 'TopArea',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      sdata: this.$store.state.cityData
     }
   },
   methods:{
