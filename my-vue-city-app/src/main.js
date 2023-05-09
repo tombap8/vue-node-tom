@@ -9,7 +9,7 @@ new Vue({
     store, // 스토어 사용 인스턴스 등록!
     components: { App },
     template: "<App/>",
-    created() {
+    created(){
         // 스토어에 있는 initSet 메서드는 어떻게 호출하지?
         // 스토어 호출 메서드가 따로 있음!
         // store.commit("메서드명",파라미터값)
