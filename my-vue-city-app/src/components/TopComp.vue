@@ -15,7 +15,17 @@
         </ul>
         <!-- 메뉴선택이동링크 -->
         <div class="m2">
-            <a href="#" v-on:click="chgMenu(num)" v-text="'메뉴' + num"></a>
+          <!-- 
+            v-on:이벤트명.prevent 
+            기본기능막기 옵션 .prevent는 
+            event.preventDefault()와 같다!
+
+            참고) 
+            v-on:이벤트명.stop 
+            이벤트버블링막기 옵션 .stop은
+            event.stopPropagation()과 같다!
+          -->
+            <a href="#" v-on:click.prevent="chgMenu(num)" v-text="'메뉴' + num"></a>
         </div>
     </header>
 </template>
