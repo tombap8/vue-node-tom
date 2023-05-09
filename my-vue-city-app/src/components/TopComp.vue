@@ -3,9 +3,9 @@
         <ul class="gnb">
             <!--  v-값,i-속성명 -->
             <!-- 리액티브 데이터인 뷰엑스 스토어 cityData변수를
-        컴포넌트 변수인 sdata에 할당하여 사용하면 처음에만 할당된
-      변수로 셋팅이되고 cityData가 변경될때 반영되지 않는다!
-    따라서 리액티브 데이터를 직접 해당자리에 사용해야한다! -->
+                컴포넌트 변수인 sdata에 할당하여 사용하면 처음에만 할당된
+                변수로 셋팅이되고 cityData가 변경될때 반영되지 않는다!
+                따라서 리액티브 데이터를 직접 해당자리에 사용해야한다! -->
             <!-- <li v-for="(v,i) in sdata" v-bind:key="i" v-if="i!='인트로'"> -->
             <li v-for="(v, i) in this.$store.state.cityData" v-bind:key="i" v-if="i != '인트로'">
                 <a href="#" v-on:click="chgData(i)">
@@ -15,7 +15,7 @@
         </ul>
         <!-- 메뉴선택이동링크 -->
         <div class="m2">
-          <!-- 
+            <!-- 
             v-on:이벤트명.prevent 
             기본기능막기 옵션 .prevent는 
             event.preventDefault()와 같다!
@@ -65,11 +65,11 @@ export default {
             // 제이쿼리 메서드 호출하기!
             // 단, 제이쿼리 코드블록으로 싸서
             // 호출함으로 DOM로드후 실행 보장!!!
-            $(()=>this.setJQ());
+            $(() => this.setJQ());
         },
         // 제이쿼리 셋팅 메서드 ///////
         setJQ() {
-          console.log("jQ셋팅!");
+            console.log("jQ셋팅!");
             // 링크 클릭시 a에 클래스 on주기
             $(".gnb a").click(function(e) {
                 e.preventDefault();
@@ -101,10 +101,10 @@ export default {
         },
     },
     // DOM을 만들고 난후
-    mounted(){
-      // 제이쿼리 셋팅 메서드 호출!
-      this.setJQ();
-    }
+    mounted() {
+        // 제이쿼리 셋팅 메서드 호출!
+        this.setJQ();
+    },
 };
 </script>
 
