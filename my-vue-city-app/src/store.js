@@ -78,6 +78,10 @@ const store = new Vuex.Store({
             {...헐.myD0,...헐.myD2};
             console.log("뮤테호출!",슉,헐.cityData);
 
+            // 메뉴 변경시 인트로화면으로 변경하기
+            헐.imgsrc = 헐.cityData.인트로.이미지;
+            헐.desc = 헐.cityData.인트로.설명;
+
         }, ////////// chgMenu 메서드 ///////
 
     },
